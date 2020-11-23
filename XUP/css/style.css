@@ -62,6 +62,18 @@
   font-style: normal;
 }
 
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -246,6 +258,7 @@ h2 {
   line-height: 24px;
   letter-spacing: 1px;
   color: var(--White);
+  transition: background 0.4s ease-in-out;
 }
 
 .first__btn:hover {
@@ -256,19 +269,19 @@ h2 {
 
 .experience__container {
   margin-top: 286px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .experience__heading {
   text-align: left;
-  margin-right: 48px;
   width: 328px;
   height: 256px;
 }
 
 .experience__image {
-  width: 376px;
+  min-width: 376px;
   height: 400px;
-  margin-right: 48px;
   background-image: url(../img/experience.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -282,7 +295,7 @@ h2 {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 23px;
   color: var(--GrayText);
 }
 
@@ -334,6 +347,10 @@ h2 {
   margin-top: 200px;
 }
 
+.skills__container {
+  position: relative;
+}
+
 .skills__heading {
   margin-bottom: 24px;
 }
@@ -377,6 +394,33 @@ h2 {
 .skills__title-1 {
   font-weight: 800;
   text-decoration: underline;
+}
+
+.skills__grad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: -moz-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 5%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 1) 95%
+  );
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 5%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 1) 95%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 5%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 1) 95%
+  );
 }
 
 /* development section */
@@ -463,12 +507,11 @@ h2 {
   padding: 368px 24px 0;
   background-color: var(--Blue);
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
 }
 
 .works__descriptions:hover {
   opacity: 0.8;
-  transition: opacity 0.3s ease-in-out;
 }
 
 .works__depiction-heading {
@@ -493,6 +536,7 @@ h2 {
   font-size: 16px;
   line-height: 24px;
   color: var(--Blue);
+  transition: background 0.4s ease-in-out;
 }
 
 .works__depiction-btn:hover {
@@ -510,6 +554,7 @@ h2 {
   font-size: 16px;
   letter-spacing: 0.6px;
   color: var(--White);
+  transition: background 0.4s ease-in-out;
 }
 
 .works__btn:hover {
@@ -540,6 +585,7 @@ h2 {
 
 .list-2__flex {
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 64px;
 }
 
@@ -621,7 +667,7 @@ h2 {
 
 .advantages__image {
   display: inline-block;
-  width: 540px;
+  min-width: 540px;
   height: 400px;
   background-image: url(../img/advantages.jpg);
   background-repeat: no-repeat;
@@ -645,7 +691,7 @@ h2 {
 
 .outsourcing__image {
   display: inline-block;
-  width: 540px;
+  min-width: 540px;
   height: 400px;
   background-image: url(../img/outsourting.jpg);
   background-repeat: no-repeat;
@@ -665,7 +711,12 @@ h2 {
 /* mistakes section */
 
 .mistakes {
-  margin-top: 173px;
+  margin-top: 168px;
+}
+
+.mistakes__container {
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .mistakes__heading {
@@ -675,10 +726,8 @@ h2 {
 }
 
 .mistakes__image {
-  width: 376px;
+  min-width: 376px;
   height: 400px;
-  margin-right: 48px;
-  margin-left: 50px;
   background-image: url(../img/mistakes.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -692,7 +741,7 @@ h2 {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 23px;
   color: var(--GrayText);
 }
 
@@ -714,13 +763,13 @@ h2 {
   margin-top: 200px;
 }
 
-.questions__accordeon {
-  max-width: 728px;
-  margin-right: 70px;
+.questions__container {
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .accordeon__wrapper {
-  min-width: 728px;
+  max-width: 728px;
 }
 
 .accordeon-section {
@@ -783,7 +832,8 @@ h2 {
 }
 
 .questions__right {
-  width: 328px;
+  width: 278px;
+  margin-right: 49px;
 }
 
 .questions__heading {
@@ -801,9 +851,13 @@ h2 {
   margin-top: 185px;
 }
 
+.feedback__container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .feedback__left {
   width: 328px;
-  margin-right: 71px;
 }
 
 .feedback__heading {
@@ -846,6 +900,21 @@ h2 {
   font-family: Montserrat;
   font-size: 14px;
   color: var(--GrayText);
+  transition: background 0.4s ease-in-out;
+}
+
+.feetback__form-message {
+  height: 104px;
+  width: 100%;
+  padding: 15px 16px;
+  resize: vertical;
+  background: var(--Grey);
+  border-radius: 8px;
+  border: none;
+  font-family: Montserrat;
+  font-size: 14px;
+  color: #52525a;
+  transition: background 0.4s ease-in-out;
 }
 
 .feetback__form-input:hover,
@@ -872,19 +941,6 @@ h2 {
   outline: none;
 }
 
-.feetback__form-message {
-  height: 104px;
-  width: 100%;
-  padding: 15px 16px;
-  resize: vertical;
-  background: var(--Grey);
-  border-radius: 8px;
-  border: none;
-  font-family: Montserrat;
-  font-size: 14px;
-  color: #52525a;
-}
-
 .feetback__form-submit {
   width: 208px;
   height: 60px;
@@ -899,6 +955,7 @@ h2 {
   font-size: 16px;
   letter-spacing: 0.8px;
   color: var(--White);
+  transition: background 0.4s ease-in-out;
 }
 
 .feetback__form-submit:hover {
@@ -915,10 +972,12 @@ h2 {
 
 .footer__container {
   margin-top: 64px;
+  justify-content: space-between;
 }
 
 .footer__list {
-  margin-left: 102px;
+  margin-right: 277px;
+  flex-wrap: wrap;
 }
 
 .footer__item {
@@ -926,7 +985,7 @@ h2 {
 }
 
 .footer__contacts {
-  margin-left: 384px;
+  min-width: 182px;
   margin-top: -10px;
 }
 
@@ -950,4 +1009,10 @@ h2 {
 
 .footaer__tel-link {
   margin-bottom: 10px;
+}
+
+@media (max-width: 1450px) {
+  .header__link {
+    margin-right: 30px;
+  }
 }
