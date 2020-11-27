@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XUP-Дизайн интерфейсов сожных сстем.</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="body">
     <header class="header">
         <div class="container header__container flex">
             <a href="" class="header__logo logo">
@@ -53,16 +54,17 @@
                 </h1>
                 <span class="first__eyebrow eyebrow">Ваш собственный отдел дизайна на аутсорсе по цене штатного UX/UI
                     специалиста</span>
-                <button class="first__btn">Презентация нашего подхода</button>
+                <button class="first__btn" id="top">Презентация нашего подхода</button>
             </div>
         </section>
 
         <section class="experience">
             <div class="container experience__container flex">
-                <h2 class="experience__heading">Небольшая команда с большим <span
+                <h2 class="experience__heading" id="experienceHeading">Небольшая команда с большим <span
                         class="first__heading-blue heading-blue">опытом</span></h2>
-                <div class="experience__image"></div>
-                <p class="experience__description">Мы объединяем талантливых специалистов с большим опытом разработки
+                <div class="experience__image" id="experiencImage"></div>
+                <p class="experience__description" id="experienceDescription">Мы объединяем талантливых специалистов с
+                    большим опытом разработки
                     дизайна интерфейсов сложных систем и совместно работаем на всех этапах проекта, от UX исследований и
                     проектирования до реализации конечного UI дизайна. Широкая экспертиза и узкая специализация
                     позволяют
@@ -331,10 +333,10 @@
             </div>
         </section>
 
-        <section class="advantages">
+        <section class="advantages" id="advantages">
             <div class="container advantages__container">
                 <div class="advantages__top flex">
-                    <h2 class="advantages__heading"><span
+                    <h2 class="advantages__heading" id="advantagesHeading"><span
                             class="advantages_heading-blue heading-blue">Преимущества</span>
                         нашей командной работы</h2>
                     <div class="advantages__image"></div>
@@ -374,11 +376,11 @@
             </div>
         </section>
 
-        <section class="outsourcing">
+        <section class="outsourcing" id="outsourcing">
             <div class="container outsourcing__container">
                 <div class="outsourcing__top flex">
                     <div class="outsourcing__image"></div>
-                    <h2 class="outsourcing__heading">Почему аутсорсинг <span
+                    <h2 class="outsourcing__heading" id="outsourcingHeading">Почему аутсорсинг <span
                             class="outsourcing__heading-blue heading-blue">выгоден</span> для вас?</h2>
                 </div>
                 <ul class="outsourcing__list list__flex flex">
@@ -418,10 +420,12 @@
 
         <section class="mistakes">
             <div class="container mistakes__container flex">
-                <h2 class="mistakes__heading">Цена <span class="mistakes__heading-blue heading-blue">ошибки</span>, если
+                <h2 class="mistakes__heading" id="mistakesHeading">Цена <span
+                        class="mistakes__heading-blue heading-blue">ошибки</span>, если
                     у вас плохой интерфейс</h2>
-                <div class="mistakes__image"></div>
-                <p class="mistakes__description">Дизайн - это не просто стильная оболочка продукта, а один из
+                <div class="mistakes__image" id="mistakesImage"></div>
+                <p class="mistakes__description" id="mistakesDescription">Дизайн - это не просто стильная оболочка
+                    продукта, а один из
                     инструментов продаж.
                     Известно, что людям достаточно всего несколько мгновений, чтобы сформировать представление о любом
                     объекте, и интерфейс вашего продукта не является исключением. Плохой дизайн вызывает недоверие, что
@@ -466,8 +470,8 @@
             <div class="container questions__container flex">
                 <div class="questions__accordeon accordeon__wrapper" id="accordeon">
                     <div class="accordeon-section js-section">
-                        <div class="accordeon-title accordeon-header">Как рассчитывается
-                            стоимость?</div>
+                        <button class="accordeon-title" tabindex=0>Как рассчитывается
+                            стоимость?</button>
                         <div class="accordeon-content js-content">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Explicabo doloribus possimus ipsa accusamus et dolor, nesciunt illum rem repellat sit
@@ -494,8 +498,8 @@
                         </div>
                     </div>
                     <div class="accordeon-section js-section">
-                        <div class="accordeon-title accordeon-header">Как формируется стоимость
-                            нормочаса?</div>
+                        <button class="accordeon-title" tabindex=0>Как формируется стоимость
+                            нормочаса?</button>
                         <div class="accordeon-content js-content">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, hic magnam. Asperiores
                                 reiciendis consequuntur fugiat recusandae ut est necessitatibus aliquid nisi nulla
@@ -509,8 +513,8 @@
                         </div>
                     </div>
                     <div class="accordeon-section js-section">
-                        <div class="accordeon-title">Как понять сколько часов мне требуется
-                            выкупать?</div>
+                        <button class="accordeon-title" tabindex=0>Как понять сколько часов мне требуется
+                            выкупать?</button>
                         <div class="accordeon-content js-content">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos fugit ex
                                 voluptates temporibus, nam ab ipsa esse consequatur harum commodi, suscipit incidunt at
@@ -525,8 +529,8 @@
                         </div>
                     </div>
                     <div class="accordeon-section js-section">
-                        <div class="accordeon-title">Как быстро вы можете приступить к работе?
-                        </div>
+                        <button class="accordeon-title" tabindex=0>Как быстро вы можете приступить к работе?
+                        </button>
                         <div class="accordeon-content js-content">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos fugit ex
                                 voluptates temporibus, nam ab ipsa esse consequatur harum commodi, suscipit incidunt at
@@ -549,7 +553,7 @@
                         </div>
                     </div>
                     <div class="accordeon-section js-section">
-                        <div class="accordeon-title accordeon-title">С чего начать?</div>
+                        <button class="accordeon-title" tabindex=0>С чего начать?</button>
                         <div class="accordeon-content js-content">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos fugit ex
                                 voluptates temporibus, nam ab ipsa esse consequatur harum commodi, suscipit incidunt at
@@ -564,8 +568,8 @@
                         </div>
                     </div>
                     <div class="accordeon-section js-section">
-                        <div class="accordeon-title">Есть ли у вас статус ИП и работаете ли вы по
-                            договору?</div>
+                        <button class="accordeon-title" tabindex=0>Есть ли у вас статус ИП и работаете ли вы по
+                            договору?</button>
                         <div class="accordeon-content js-content">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos fugit ex
                                 voluptates temporibus, nam ab ipsa esse consequatur harum commodi, suscipit incidunt at
@@ -680,6 +684,8 @@
 
     </main>
     <script src="js/accordion.js"></script>
+    <script src=js/script.js></script>
+    <script src="js/scrol.js"></script>
 </body>
 
 </html>
